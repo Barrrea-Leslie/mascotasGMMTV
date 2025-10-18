@@ -1,20 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/src/login/style.css">
 </head>
+
 <body>
-    <h1 class="titulo">Inicio de Sesion</h1>
-    <form id="form" action="/" method="POST">
-        <input type="text" id="nCuenta" class="input" name="nCuenta" placeholder="Ingresa el numero de cuenta">
-        <input type="text" id="nip" class="input" name="nip" placeholder="Ingresa el NIP">
-        <button type="submit">Ingresar</button>
-    </form>
-    
+    <div class="main-container">
+
+        <form id="form" action="/" method="POST">
+
+            <div class="img">
+                <img src="/assets/WilliamEst.png" alt="icon_page" class="icon" width="140px">
+            </div>
+
+            <div class="container-inputs">
+
+                <div class="container-input">
+                    <img src="/assets/User_icon.png" alt="icon" class="icon-input">
+                    <input type="text" id="nAccount" class="input" name="nAccount" placeholder="User">
+                </div>
+
+                <div class="container-input">
+                    <img src="/assets/Lock_icon.png" alt="icon" class="icon-input">
+                    <input type="password" id="nip" class="input" name="nip" placeholder="Password">
+                </div>
+
+                <button type="submit">Enter</button>
+
+
+
+            </div>
+
+
+
+
+
+        </form>
+
+    </div>
+
+
+
+
 
     <script src="app.js"></script>
 </body>
+
 </html>

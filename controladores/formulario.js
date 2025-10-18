@@ -36,13 +36,13 @@ const verificarCredenciales = async (req, res) => {
 
     try {
         console.log("Cuerpo recibido:", req.body);
-        const { nCuenta, nip } = req.body;
-        console.log("Número de cuenta:", nCuenta);
+        const { nAccount, nip } = req.body;
+        console.log("Número de cuenta:", nAccount);
         console.log("NIP:", nip);
 
 
         const consulta = "SELECT * FROM usuarios WHERE users = $1 and passwords = $2";
-        const resultado = await pool.query(consulta, [nCuenta, nip]);
+        const resultado = await pool.query(consulta, [nAccount, nip]);
 
         if (resultado.rows.length === 0) {
             return res.status(401).json({
