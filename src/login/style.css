@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 
@@ -6,7 +6,7 @@
 }
 
 
-.main-container{
+.main-container {
     background-color: #5e7c9c;
     width: 100%;
     height: 100vh;
@@ -15,7 +15,7 @@
     justify-content: center;
 }
 
-#form{
+#form {
     background-color: white;
     width: 400px;
     height: 60%;
@@ -27,13 +27,17 @@
     gap: 33px;
 
     border-radius: 30px;
+
+    box-shadow: 0px 0px 16px 0px rgba(113, 113, 113, 0.75);
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(113, 113, 113, 0.75);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(113, 113, 113, 0.75);
 }
 
-.icon{
+.icon {
     width: 150px;
 }
 
-.img{
+.img {
     background-color: #5e7c9c;
     border: 5px solid #5e7c9c;
     width: 150px;
@@ -42,22 +46,24 @@
     overflow: hidden;
 }
 
-.input{
+.input {
     border: none;
     background-color: transparent;
     padding: 3px;
     outline: none;
+    color: #5e7c9c;
+    font-weight: bold;
 }
 
-.input::placeholder{
+.input::placeholder {
     color: #a5a4a4;
 }
 
-.icon-input{
+.icon-input {
     width: 20px;
 }
 
-.container-input{
+.container-input {
     background-color: #f6f1e8;
     width: 100%;
     display: flex;
@@ -69,19 +75,19 @@
     border-radius: 10px;
 }
 
-.container-inputs{
+.container-inputs {
     width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    
+
 }
 
 
 
-button{
+button {
     border: none;
     width: 280px;
     padding: 9px 0;
@@ -90,5 +96,3 @@ button{
     color: white;
     font-weight: bold;
 }
-
-

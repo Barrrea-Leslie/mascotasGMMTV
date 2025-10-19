@@ -6,6 +6,8 @@ const {probarConexion, pool} = require('./configuracion_DB/baseDatos')
 const {obtenerUsuarios} = require("./controladores/formulario");
 const {verificarCredenciales} = require("./controladores/formulario");
 
+const {obtenerMascotas} = require("./controladores/paginaPrincipal");
+
 
 const app = express();
 
@@ -26,6 +28,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/usuarios', obtenerUsuarios);
+
+app.get('/api/mascotas', obtenerMascotas);
 
 app.post('/', verificarCredenciales);
 
