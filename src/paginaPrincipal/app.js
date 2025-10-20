@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         console.log("Respuesta del servidor:", datosMascotas);
 
-        if(!datosMascotas.exito) throw new Error(datosMascotas.mensaje);
-        
+        if (!datosMascotas.exito) throw new Error(datosMascotas.mensaje);
+
         const container = document.getElementById("container-targets");
         container.innerHTML = "";
 
@@ -17,17 +17,27 @@ document.addEventListener("DOMContentLoaded", async () => {
             div.classList.add("target-mascot");
 
             div.innerHTML = `
+                <div class="imagen" style="border-color: ${mascota.colormascot};">
                 <img src="${mascota.url}" >
-                <h2>${mascota.name}</h2>
-                <h3>${mascota.ship}</h3>
+                </div>
+                <h2 style="color: ${mascota.colormascot};">${mascota.name.toUpperCase()}</h2>
+                <h3 style="color: ${mascota.colorship};">${mascota.ship.toUpperCase()}</h3>
             `;
 
             container.appendChild(div);
 
         });
-        
+
     } catch (error) {
         console.error("Error al cargar las mascotas", error);
     }
 
+});
+
+
+const container = document.getElementById('container-targets');
+
+container.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    container.scrollLeft += event.deltaY;
 });

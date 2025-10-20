@@ -1,3 +1,115 @@
-.target-mascot img{
-    width: 100px;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Nunito;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #8eb3db;
+}
+
+.titulo {
+    height: 15%;
+    display: flex;
+    justify-content:  center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    color: white;
+    font-weight: bold;
+}
+
+
+
+.container-targets {
+    height: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    padding: 0 50px;
+
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    
+
+}
+
+.container-targets::-webkit-scrollbar {
+    display: none;
+}
+
+.target-mascot {
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    scroll-snap-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.target-mascot:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.imagen {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+img {
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.section-create {
+    height: 15%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+}
+
+button{
+    background-color: #fedd49;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: white;
+    font-size: 23pt;
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin-right: 90px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #74d944;
+    
 }
