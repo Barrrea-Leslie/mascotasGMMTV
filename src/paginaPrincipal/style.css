@@ -5,6 +5,7 @@
 }
 
 .main-container {
+
     width: 100%;
     height: 100vh;
     background-color: #8eb3db;
@@ -13,16 +14,19 @@
 .titulo {
     height: 15%;
     display: flex;
-    justify-content:  center;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.title{
+.title {
     color: white;
     font-weight: bold;
 }
 
+.titulo h1 {
+    font-size: 30pt;
+}
 
 
 .container-targets {
@@ -36,7 +40,7 @@
     overflow: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    
+
 
 }
 
@@ -63,8 +67,11 @@
 }
 
 .target-mascot:hover {
+    cursor: pointer;
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    
 }
 
 .imagen {
@@ -91,10 +98,10 @@ img {
     display: flex;
     justify-content: end;
     align-items: center;
-    
+
 }
 
-button{
+#btn-openModal {
     background-color: #fedd49;
     border: none;
     border-radius: 50%;
@@ -108,8 +115,123 @@ button{
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-button:hover{
+#btn-openModal:hover {
     cursor: pointer;
     background-color: #74d944;
+
+}
+
+
+/* ESTILO DE CUENDO EL MODAL ESTA ACTIVO */
+
+.container-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #5e7c9cdc;
+    transition: display 1s ease;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 370px;
+    background-color: white;
+    border-radius: 20px;
+
+    box-shadow: 0px 0px 31px 0px rgba(127, 127, 127, 0.75);
+    -webkit-box-shadow: 0px 0px 31px 0px rgba(127, 127, 127, 0.75);
+    -moz-box-shadow: 0px 0px 31px 0px rgba(127, 127, 127, 0.75);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
+
+#form-create{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 60%;
+}
+
+
+.imagenView{
+    width: 30%;
+}
+
+.imagenView img{
+    width: 200px;
+}
+
+.input{
+    width: 70%;
+    border: none;
+    padding: 12px 0;
+    outline: none;
+    border-bottom: 1.6px solid #a5a4a4;
+    color: #a5a4a4;
+    font-weight: 600;
+}
+
+.input::placeholder{
+    color: #a5a4a4;
+}
+
+.input-colors{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin: 15px;
+}
+
+.input-colors label{
+    color: #a5a4a4;
+}
+
+.colorInput{
+    border: none;
+}
+
+.container-button{
+    width: 70%;
+    height: 60px;
+
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 20px;
+}
+
+.container-button button{
+    border: none;
+    padding: 7px 24px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.container-button button:hover{
+    cursor: pointer;
+}
+
+.btn-create{
+    background-color: #74d944;
+}
+
+.btn-close{
+    background-color: #a5a4a4;
+}
+
+

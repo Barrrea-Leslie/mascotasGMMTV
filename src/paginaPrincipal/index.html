@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -20,19 +20,61 @@
         </div>
 
         <div id="container-targets" class="container-targets">
-            
+
         </div>
 
         <div class="section-create">
-            <button type="button">+</button>
+            <button type="button" id="btn-openModal">+</button>
         </div>
 
 
     </div>
 
+    <div class="container-modal" id="container-modal">
+
+        <div class="modal">
 
 
-    <script src="/src/paginaPrincipal/app.js"></script>
+            <div class="imagenView">
+                <img src="/assets/photo_icon.png" alt="icon">
+            </div>
+
+            <form  id="form-create">
+
+                <input type="text" class="input" name="url" placeholder="Paste photo link">
+                <input type="text" class="input" name="nameMascot" placeholder="Name's Mascot">
+                <input type="text" class="input" name="nameShip" placeholder="Ship">
+
+                <div class="input-colors">
+                    <label for="colorName">Name Color</label>
+                    <input type="color" class="colorInput" name="colorName">
+                    <label for="colorShip">Name Ship</label>
+                    <input type="color" class="colorInput" name="colorShip">
+                </div>
+
+                <div class="container-button">
+
+                    <button type="button" class="btn-close" id="btn-close">Cancel</button>
+                    <button type="submit" class="btn-create" id="btn-create">Create</button>
+                    
+                </div>
+
+                
+                
+
+
+            </form>
+
+            
+            
+        </div>
+
+    </div>
+
+
+
+    <script src=" /src/paginaPrincipal/app.js"></script>
+    <script src="../../controladores/imprimirMascotas.js"></script>
 </body>
 
 </html>
