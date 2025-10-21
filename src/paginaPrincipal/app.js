@@ -5,12 +5,19 @@
 const container = document.getElementById('container-targets');
 
 container.addEventListener('wheel', (evt) => {
-    const isHorizontalScroll = Math.abs(evt.deltaY) > Math.abs(evt.deltaX);
-    if (isHorizontalScroll) {
-        evt.preventDefault();
-        container.scrollLeft += evt.deltaY;
-    }
-});
+
+    const scrollSpeed = 2; // Aumenta o reduce para ajustar la fluidez
+
+    // Desplazamiento horizontal fluido
+    container.scrollBy({
+        left: evt.deltaY * scrollSpeed,
+        behavior: 'smooth'
+    });
+}, { passive: false });
+
+
+
+
 
 //Funcion abrir modal
 
@@ -18,7 +25,7 @@ const containerModal = document.getElementById("container-modal");
 const btnOpelModal = document.getElementById("btn-openModal");
 
 btnOpelModal.addEventListener("click", () => {
-    
+
     containerModal.style.display = "block";
 
 })

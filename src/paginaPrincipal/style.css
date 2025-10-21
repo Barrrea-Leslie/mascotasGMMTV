@@ -40,7 +40,7 @@
     overflow: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-
+    scroll-behavior: smooth;
 
 }
 
@@ -71,7 +71,7 @@
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
-    
+
 }
 
 .imagen {
@@ -152,10 +152,10 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-#form-create{
+#form-create {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,15 +165,15 @@ img {
 }
 
 
-.imagenView{
+.imagenView {
     width: 30%;
 }
 
-.imagenView img{
+.imagenView img {
     width: 200px;
 }
 
-.input{
+.input {
     width: 70%;
     border: none;
     padding: 12px 0;
@@ -183,11 +183,11 @@ img {
     font-weight: 600;
 }
 
-.input::placeholder{
+.input::placeholder {
     color: #a5a4a4;
 }
 
-.input-colors{
+.input-colors {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -196,15 +196,15 @@ img {
     margin: 15px;
 }
 
-.input-colors label{
+.input-colors label {
     color: #a5a4a4;
 }
 
-.colorInput{
+.colorInput {
     border: none;
 }
 
-.container-button{
+.container-button {
     width: 70%;
     height: 60px;
 
@@ -214,7 +214,7 @@ img {
     gap: 20px;
 }
 
-.container-button button{
+.container-button button {
     border: none;
     padding: 7px 24px;
     border-radius: 8px;
@@ -222,16 +222,14 @@ img {
     font-weight: bold;
 }
 
-.container-button button:hover{
+.container-button button:hover {
     cursor: pointer;
 }
 
-.btn-create{
+.btn-create {
     background-color: #74d944;
 }
 
-.btn-close{
+.btn-close {
     background-color: #a5a4a4;
 }
-
-
