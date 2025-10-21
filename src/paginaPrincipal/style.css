@@ -233,3 +233,19 @@ img {
 .btn-close {
     background-color: #a5a4a4;
 }
+
+.container-Menu{
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    width: 100%;
+    text-align: end;
+}
+
+.container-Menu img{
+    width: 40px;
+}
+
+#menu-target{
+    display: none;
+}

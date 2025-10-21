@@ -11,8 +11,10 @@ async function cargarMascotas() {
         datosMascotas.datos.forEach(mascota => {
             const div = document.createElement("div");
             div.classList.add("target-mascot");
+            div.id = "target-mascot";
 
             div.innerHTML = `
+                
                 <div class="imagen" style="border-color: ${mascota.colormascot};">
                 <img src="${mascota.url}" >
                 </div>
@@ -68,4 +70,3 @@ formCreate.addEventListener("submit", async (e) => {
     }
 });
 
-module.exports = {cargarMascotas}

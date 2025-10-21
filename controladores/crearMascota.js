@@ -19,7 +19,7 @@ const crearMascota = async (req, res) => {
             exito: true,
             mensaje: "Mascota creada exitosamente",
             datos: resultado.rows[0]
-        })
+        });
 
 
     } catch (error) {
